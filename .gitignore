@@ -1,3 +1,6 @@
 .DS_Store
 .direnv
 .envrc
+
+# skywayキーは隠す
+static/js/key.js

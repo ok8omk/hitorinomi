@@ -1,1 +1,57 @@
-aaaaaaaaaaaa
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <title>1人飲みじゃないよ</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+    <script type="text/javascript" src="static/js/skyway.js"></script>
+    <script type="text/javascript" src="static/js/key.js"></script>
+    <script type="text/javascript" src="static/js/script.js"></script>
+  </head>
+
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- 気分の送信画面 -->
+    <div id="post_page">
+    	<p>今日はどんな気分？</p>
+    	<div>
+			<form action="#">
+				<p>
+				<input name="group1" type="radio" id="sippori" class="with-gap" checked />
+				<label for="sippori">しっぽり</label>
+				</p>
+				<p>
+				<input name="group1" type="radio" id="gayagaya" class="with-gap" />
+				<label for="gayagaya">ガヤガヤ</label>
+				</p>
+				<input type="hidden" name="peerId" value="">
+			</form>
+    	</div>
+    	<div>
+    		<a id="enter" class="waves-effect waves-light btn-large"><i class="material-icons left">search</i>Enter</a>
+		</div>
+    </div>
+    <!-- 待ち時間 -->
+    <div id="wait_page">
+      
+    </div>
+
+    <!-- チャット画面 -->
+    <div id="chat_page">
+    	
+
+    </div>
+        
+  </body>
+</html>
+
