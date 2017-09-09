@@ -1,3 +1,13 @@
+# hitorinomi
+
+## Require
+
+* Python3
+* Flask
+
+
+
+
 # SkyWay video chat example
 
 ## Getting started
