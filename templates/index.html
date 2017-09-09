@@ -23,21 +23,21 @@
 
     <!-- 気分の送信画面 -->
     <div id="post_page">
-    	<p>今日はどんな気分？</p>
+    	<p class="what_feeling">今日はどんな気分？</p>
     	<div>
 			<form action="/match" method="post">
-				<p>
+				<p style="text-align: center;">
 				<input name="group1" type="radio" id="sippori" class="with-gap" checked />
 				<label for="sippori">しっぽり</label>
 				</p>
-				<p>
+				<p style="text-align: center;">
 				<input name="group1" type="radio" id="gayagaya" class="with-gap" />
 				<label for="gayagaya">ガヤガヤ</label>
 				</p>
 				<input type="hidden" name="peerId" value="">
 			</form>
     	</div>
-    	<div>
+    	<div class="btn_area">
     		<a id="enter" class="waves-effect waves-light btn-large"><i class="material-icons left">search</i>Enter</a>
 		</div>
     </div>
@@ -48,7 +48,11 @@
 
     <!-- チャット画面 -->
     <div id="chat_page">
-    	
+		<!-- Video area -->
+		<div class="pure-u-2-3" id="video-container">
+			<video id="their-video" autoplay></video>
+			<video id="my-video" muted="true" autoplay></video>
+		</div>
 
     </div>
         
