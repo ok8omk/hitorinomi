@@ -6,6 +6,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/chat')
+def chatroom():
+    return render_template('chat.html')
+
 if __name__ == '__main__':
-    app.debug = True # デバッグモード有効化
-    app.run(host='0.0.0.0') # どこからでもアクセス可能に
+    app.debug = True
+    app.run(host='0.0.0.0')
