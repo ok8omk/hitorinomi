@@ -27,11 +27,11 @@
     	<div>
 			<form action="#">
 				<p style="text-align: center;">
-				<input name="group1" type="radio" id="sippori" class="with-gap" checked />
+				<input name="group1" type="radio" id="sippori" class="with-gap" value="sippori" checked />
 				<label for="sippori">しっぽり</label>
 				</p>
 				<p style="text-align: center;">
-				<input name="group1" type="radio" id="gayagaya" class="with-gap" />
+				<input name="group1" type="radio" id="gayagaya" class="with-gap" value="gayagaya" />
 				<label for="gayagaya">ガヤガヤ</label>
 				</p>
 				<input type="hidden" name="peerId" value="">
@@ -48,12 +48,19 @@
 
     <!-- チャット画面 -->
     <div id="chat_page">
+    	<!-- News area -->
+    	<div class="news_area">
+    		
+    	</div>
 		<!-- Video area -->
-		<div class="pure-u-2-3" id="video-container">
+		<div class="video_area" id="video-container">
 			<video id="their-video" autoplay></video>
 			<video id="my-video" muted="true" autoplay></video>
 		</div>
-
+		<!-- 退室ボタン -->
+		<dir class="end_btn_area">
+			<a class="waves-effect waves-light btn"><i class="material-icons left">call_end</i>END</a>
+		</dir>	
     </div>
         
   </body>

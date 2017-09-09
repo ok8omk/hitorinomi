@@ -21,14 +21,44 @@ $(function() {
 
   $('#enter').on('click', function(){
 
-    $("form").submit();
-
     $("#post_page").hide();
     $("#chat_page").show();
 
-    // 第一引数で指定したPeerIDへ発信　mediaconnectionを返す
-    var call = peer.call($('input:hidden[name="peerId"]').val(), window.localStream);
-    step3(call);
+    $.ajax({
+      // リクエストメソッド(GET,POST,PUT,DELETEなど)
+      type: 'POST',
+      // リクエストURL
+      url: '/match',
+      // タイムアウト(ミリ秒)
+      timeout: 10000,
+      // キャッシュするかどうか
+      cache: false,
+      // サーバに送信するデータ(name: value)
+      data: {
+        'peerId': peer.id,
+        'type': $("input:radio[name='group1']:checked").val()
+      },
+      // レスポンスを受け取る際のMIMEタイプ(html,json,jsonp,text,xml,script)
+      // レスポンスが適切なContentTypeを返していれば自動判別します。
+      dataType: 'text',
+      // Ajax通信前処理
+      beforeSend: function(jqXHR) {
+        // falseを返すと処理を中断
+        return true;
+      },
+      // コールバックにthisで参照させる要素(DOMなど)
+      context: domobject
+    }).done(function(response, textStatus, jqXHR) {
+        // 成功時処理
+        //レスポンスデータはパースされた上でresponseに渡される
+         // 第一引数で指定したPeerIDへ発信　mediaconnectionを返す
+      var call = peer.call(response, window.localStream);
+      step3(call);
+    }).fail(function(jqXHR, textStatus, errorThrown ) {
+        // 失敗時処理
+    }).always(function(data_or_jqXHR, textStatus, jqXHR_or_errorThrown) {
+        // doneまたはfail実行後の共通処理
+    });
 
   });
 

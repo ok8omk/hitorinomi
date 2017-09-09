@@ -39,3 +39,10 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 #chat_page {
 	display: none;
 }
+
+.end_btn_area {
+	width: 100%;
+	position: fixed;
+		bottom: 10px;
+	text-align: center;
+}
